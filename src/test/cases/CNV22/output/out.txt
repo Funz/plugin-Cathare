@@ -1,0 +1,29 @@
+VERSION: /opt/CATHARE2_V25_3_MOD931
+Initialisation...
+Lancement du reader...
+ 
+ Default Cathare version is : 
+    /opt/CATHARE2_V25_3_MOD931 
+ 
+ 
+ ==> Job Terminated for symbolic cathare links
+ 
+ SUCCESSFUL END.
+ 
+  execution sans mask reader
+ 
+ Default Cathare version is : 
+    /opt/CATHARE2_V25_3_MOD931 
+ 
+ 
+ ==> Job Terminated for symbolic cathare links
+ 
+ SUCCESSFUL END.
+ 
+  pas d'erreur reader
+Pas de calcul permanent initial
+Lancement de Cathare...
+  pas d'erreur calcul
+Lancement du post-traitement...
+Lancement du post-traitement...
+  pas d'erreur post-pro

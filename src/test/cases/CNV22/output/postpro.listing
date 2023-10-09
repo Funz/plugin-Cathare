@@ -1,0 +1,46 @@
+ 
+   ================================================
+     RUNNING POST-PROCESSING OF CATHARE 2 V2.5
+   ================================================
+ 
+ *******************************************
+
+        CATHARE 2-   C2 POSTPRO 
+
+        LIBRARY RELEASE NUMBER : 
+ Release: v25_3 9.31 (svn: a060b03) Date: 28-05-2020 
+
+ *******************************************
+
+
+=============================================================
+READING OF UNFORMATTED-C2V15-RESULT-FILE ON LOGICAL UNIT : 21
+=============================================================
+         Release: v25_3 9.31 (svn: a060b03) Date: 28-05-2020                            
+
+
+TITLE : VERTICAL CANON EXPERIMENT - TUBULAR GEOMETRY - TEST 22                          
+-----
+
+
+ DESCR. RECORDS ARE READ 
+ VARIA. RECORDS ARE READ   0.405460D+03
+
+
+        -----------------------------------------
+             END OF CATHARE 2 POST-PROCESSING  
+        -----------------------------------------
+
+ *******************************************************
+  WORKSPACE USED IN FAST TO READ INPUT DATA 
+  POINTER            WORKSPACE =      947  /   5000000
+  CHARACTER*80       WORKSPACE =        0  /     20000
+  DOUBLE             WORKSPACE =   148819  /  11000000
+  INTEGER            WORKSPACE =   252303  /   1500000
+  CHARACTER*8        WORKSPACE =      797  /   1300000
+ *******************************************************
+ 
+   ================================================
+     END OF  POST-PROCESSING OF CATHARE 2 V2.5
+   ================================================
+ 

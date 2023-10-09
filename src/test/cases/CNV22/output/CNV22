@@ -1,0 +1,366 @@
+*0000 FORMAT(' @(#) CNV22.dat #_v25_# 2.1 11/21/03 ')
+BEGIN DATA ;
+*
+TITLE 'VERTICAL CANON EXPERIMENT - TUBULAR GEOMETRY - TEST 22';
+*
+*********************************************************************
+*   CONSTANTS
+*********************************************************************
+*
+PI  = 3.14159D0 ;
+D1  = 1.0D-1 ;
+PE1 = PI*D1 ;
+S1  = PI*D1*D1/4.D0 ;
+D1E = D1 + 0.25D-1 ;
+*
+*CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+*
+*       THE FOLLOWING VARIABLES ARE CHARACTERISTIC OF EACH TEST
+*                              BEGIN
+*CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+*
+*>> OUTLET PRESSURE (ESTIMATED TO HAVE THE RIGHT TEST PRESSURE)
+*
+PRES = 56.6D5 ;
+*
+*>> INITIAL TEMPERATURE
+*
+TEXP = 232.D0 ;
+*
+*>> !!! DO NOT FORGET TO PUT THE RIGHT PRESSURE AND TEMPERATURE
+*                            IN REALC !!!
+*
+*  PRESSURE : 57.D5 ; TEMPERATURE : 232.D0
+*
+*>> BREAK DIAMETER
+*
+D4 = 5.0D-3 ;
+*
+*>> CONVERGING NOZZLE DIAMETER AT 4.496 m 
+*
+D3 = 1.49D-2 ;
+*
+*>> DIAMETER AT 4.483 m (junction between test section and converging) 
+*
+D2 = 4.47D-2 ;
+*
+*
+PE2 = PI*D2 ;
+PE3 = PI*D3 ;
+PE4 = PI*D4 ;
+*
+S2 = PI*D2*D2/4.D0 ;
+S3 = PI*D3*D3/4.D0 ;
+S4 = PI*D4*D4/4.D0 ;
+*
+D2E = D2 + 0.25D-1 ;
+D3E = D3 + 0.25D-1 ;
+D4E = D4 + 0.25D-1 ;
+*
+*CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+*                              END
+*CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+*
+*********************************************************************
+*   DEFINE THE AXIAL ELEMENT
+*********************************************************************
+*
+CANAL   = AXIAL BOTTOM USTREAM TOP DSTREAM ;
+*
+*********************************************************************
+*   DEFINE THE VECTOR POINTS
+*********************************************************************
+*
+P001 = XAXIS 0.00000 ;
+P002 = XAXIS 0.29000 ;
+P003 = XAXIS 0.43000 ;
+P004 = XAXIS 0.56550 ;
+P005 = XAXIS 0.68050 ;
+P006 = XAXIS 0.77850 ;
+P007 = XAXIS 0.97850 ;
+P008 = XAXIS 1.08550 ;
+P009 = XAXIS 1.17550 ;
+P010 = XAXIS 1.27550 ;
+P011 = XAXIS 1.39350 ;
+P012 = XAXIS 1.53350 ;
+P013 = XAXIS 1.68350 ;
+P014 = XAXIS 1.85350 ;
+P015 = XAXIS 2.02550 ;
+P016 = XAXIS 2.47550 ;
+P017 = XAXIS 2.61350 ;
+P018 = XAXIS 3.06350 ;
+P019 = XAXIS 3.23550 ;
+P020 = XAXIS 3.38550 ;
+P021 = XAXIS 3.51850 ;
+P022 = XAXIS 3.74850 ;
+P023 = XAXIS 3.86050 ;
+P024 = XAXIS 3.96870 ;
+P025 = XAXIS 4.06522 ;
+P026 = XAXIS 4.14566 ;
+P027 = XAXIS 4.21270 ;
+P028 = XAXIS 4.26857 ;
+P029 = XAXIS 4.31513 ;
+P030 = XAXIS 4.35393 ;
+P031 = XAXIS 4.38627 ;
+P032 = XAXIS 4.41322 ;
+P033 = XAXIS 4.43568 ;
+P034 = XAXIS 4.45440 ;
+P035 = XAXIS 4.47000 ;
+P036 = XAXIS 4.48300 ;
+P037 = XAXIS 4.49600 ;
+P038 = XAXIS 4.50850 ;
+P039 = XAXIS 4.52100 ;
+P040 = XAXIS 4.53046 ;
+P041 = XAXIS 4.53970 ;
+P042 = XAXIS 4.54740 ;
+P043 = XAXIS 4.55382 ;
+P044 = XAXIS 4.55917 ;
+P045 = XAXIS 4.56363 ;
+P046 = XAXIS 4.56735 ;
+P047 = XAXIS 4.57045 ;
+P048 = XAXIS 4.57304 ;
+P049 = XAXIS 4.57520 ;
+P050 = XAXIS 4.57700 ;
+P051 = XAXIS 4.57850 ;
+P052 = XAXIS 4.57985 ;
+P053 = XAXIS 4.58100 ;
+P054 = XAXIS 4.58200 ;
+*
+*********************************************************************
+*   DEFINE MESHES
+*********************************************************************
+*
+MAIL1= P001 SEGMENT 2 P002 COS  1.
+            SEGMENT 1 P003 COS  1.
+            SEGMENT 1 P004 COS  1.
+            SEGMENT 1 P005 COS  1.
+            SEGMENT 1 P006 COS  1.
+            SEGMENT 2 P007 COS  1.
+	    SEGMENT 1 P008 COS  1.
+            SEGMENT 1 P009 COS  1.
+            SEGMENT 1 P010 COS  1.
+            SEGMENT 1 P011 COS  1.
+            SEGMENT 1 P012 COS  1.
+            SEGMENT 1 P013 COS  1.
+            SEGMENT 1 P014 COS  1.
+            SEGMENT 1 P015 COS  1.
+            SEGMENT 3 P016 COS  1.
+            SEGMENT 1 P017 COS  1.
+	    SEGMENT 3 P018 COS  1.
+            SEGMENT 1 P019 COS  1.
+            SEGMENT 1 P020 COS  1.
+            SEGMENT 1 P021 COS  1.
+            SEGMENT 2 P022 COS  1.
+            SEGMENT 1 P023 COS  1.
+            SEGMENT 1 P024 COS  1.
+            SEGMENT 1 P025 COS  1.
+            SEGMENT 1 P026 COS  1.
+            SEGMENT 1 P027 COS  1.
+	    SEGMENT 1 P028 COS  1.
+            SEGMENT 1 P029 COS  1.
+            SEGMENT 1 P030 COS  1.
+            SEGMENT 1 P031 COS  1.
+            SEGMENT 1 P032 COS  1.
+            SEGMENT 1 P033 COS  1.
+            SEGMENT 1 P034 COS  1.
+            SEGMENT 1 P035 COS  1.
+            SEGMENT 1 P036 COS  1.
+            SEGMENT 1 P037 COS  1.
+	    SEGMENT 1 P038 COS  1.
+            SEGMENT 1 P039 COS  1.
+            SEGMENT 1 P040 COS  1.
+            SEGMENT 1 P041 COS  1.
+            SEGMENT 1 P042 COS  1.
+            SEGMENT 1 P043 COS  1.
+            SEGMENT 1 P044 COS  1.
+            SEGMENT 1 P045 COS  1.
+            SEGMENT 1 P046 COS  1.
+            SEGMENT 1 P047 COS  1.
+	    SEGMENT 1 P048 COS  1.
+	    SEGMENT 1 P049 COS  1.
+            SEGMENT 1 P050 COS  1.
+            SEGMENT 1 P051 COS  1.
+            SEGMENT 1 P052 COS  1.
+            SEGMENT 1 P053 COS  1.
+            SEGMENT 1 P054 COS  1. ;
+*
+MESH CANAL MAIL1 ;
+*
+*********************************************************************
+*   INPUT GEOMETRIC DATA FOR EACH VECTOR POINT
+*********************************************************************
+*
+GEOM CANAL
+    (P001 AND P035)  SECT S1 PERI PE1 SIZE D1
+         P036        SECT S2 PERI PE2 SIZE D2
+         P037        SECT S3 PERI PE3 SIZE D3
+    (P050 AND P054)  SECT S4 PERI PE4 SIZE D4 ;
+*
+*********************************************************************
+*   DEFINE THE BOUNDARY CONDITIONS DURING TRANSIENT
+*********************************************************************
+*
+*    INLET B.C.
+*
+ENTREE  = BCONDIT BOTTOM DSTREAM ;
+MODEL ENTREE BC3B
+TL      (REALLIST      TEXP      TEXP  )
+TG      (REALLIST       -1.      -1.   )
+ALFA    (REALLIST     1.0D-7   1.0D-7  )
+VL      (REALLIST     1.0D-7   1.0D-7  )
+VV      (REALLIST     1.0D-7   1.0D-7  )
+ABSTIME (REALLIST     0.0D0   1000.0D0 ) ;
+*
+*    OUTLET B.C.
+*
+SORTIE  = BCONDIT TOP USTREAM ;
+MODEL SORTIE BC4A 
+P        (REALLIST  PRES     PRES   1.0D5    1.0D5)  
+ABSTIME  (REALLIST  0.0D0   3.0D-3  5.0D-3  1000.0D0) ; 
+*
+*********************************************************************
+*   DEFINITION OF WALLS
+*********************************************************************
+*
+PAR1 = WALL CANAL EXTERNAL CYLINDER
+*
+*  TEST SECTION
+*
+    SEGMENT P001 P035
+    INOX316 ISO 4 DIAM D1 D1E
+    HPERIM CONST PE1
+*
+    SEGMENT P035 P036
+    INOX316 ISO 4 DINI D1 D1E
+                  DEND D2 D2E
+    HPERIM  POINT P035 PE1
+                  P036 PE2
+*
+*  CONVERGING NOZZLE
+*
+    SEGMENT P036 P037
+    INOX316 ISO 4 DINI D2 D2E
+                  DEND D3 D3E
+    HPERIM  POINT P036 PE2
+                  P037 PE3
+*
+    SEGMENT P037 P050
+    INOX316 ISO 4 DINI D3 D3E
+                  DEND D4 D4E
+    HPERIM  POINT P037 PE3
+                  P050 PE4
+*
+    SEGMENT P050 P054
+    INOX316 ISO 4 DIAM D4 D4E
+    HPERIM CONST PE4            ;
+*
+*********************************************************************
+*   CIRCUIT
+*********************************************************************
+*             
+CIRCANON = CIRCUIT ENTREE CANAL SORTIE ;
+CIRCTOT = REACTOR CIRCANON ;
+*
+END DATA ;
+*
+*--------------------------------------------------------------------
+*                    BEGIN OF COMMAND BLOCK
+*--------------------------------------------------------------------
+*
+*********************************************************************
+*   DOUBLE AND INTEGER
+*********************************************************************
+* 
+DOUBLE DT0 TIME DT TMAX ; 
+INTEGER NSTEPS ;
+*
+RESTORE ;
+REACTOR CIRCTOT ;
+*
+*********************************************************************
+*   OPTION  (GRID OF REVISION 6)
+*********************************************************************
+*
+OPTION DTMIN 1.D-6 ;
+*
+*********************************************************************
+*   STEADY STATE
+*********************************************************************
+*
+PERMINIT CIRCANON CANAL ENTREE SORTIE ;
+*
+*  STEADY STATE B.C.
+*
+REALC BOTTOM  P     57.D5
+              TL    232.
+              HVSAT
+              ALFA  1.0D-5
+              VL    1.0D-5
+              VV    1.0D-5;
+GOPERM  ;
+*
+*********************************************************************
+*   PRINTOUT AND POST-PROCESSING FREQUENCY
+*********************************************************************
+*
+* LISTING
+*
+PERIOD CIRCANON ALL SECOND 50. ;
+*
+* POST-PROCESSING
+*
+RESULT CIRCANON SECOND 0.5 ;
+*
+*********************************************************************
+* LOCAL VARIABLE INIT.
+*********************************************************************
+*
+DT0    = 5.0D-4 ;
+NSTEPS = 8000 ;
+*
+*********************************************************************
+* TIME OF CALCULATION END
+*********************************************************************
+*
+TMAX   = 405.D0  ;
+*
+*********************************************************************
+* STABILISE TRANSIENT
+*********************************************************************
+*
+DT     = DT0  ;
+TIME   = 0.D0 ;
+*
+REPEAT BLOCK0 20 ;
+  TRANSIENT CIRCANON TIME DT ;
+  DT = NEWDT ;
+END BLOCK0 ;
+*
+*********************************************************************
+* ACTUAL TRANSIENT
+*********************************************************************
+*
+OPTION DTMAX .5 ;
+*
+DT     = DT0  ;
+TIME   = 0.D0 ;
+*
+REPEAT BLOCK1 NSTEPS ;
+*
+  TIME = TIME + DT ;
+  TRANSIENT CIRCANON TIME DT ;
+  DT = NEWDT ;
+  TIME = NEWTIME ;
+  IF ( TIME > TMAX ) THEN;
+    QUIT BLOCK1 ;
+  ENDIF ;
+*
+END BLOCK1 ;
+*
+SAVE 3 ;
+*
+*=================================================================== 
+* END
+*=================================================================== 
+*
+END EXEC ;

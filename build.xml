@@ -1,0 +1,20 @@
+<project name="plugin-Cathare" default="test" basedir=".">
+
+    <property name="code.name" value="Cathare" />
+    <property name="install.dir" value="${basedir}/Funz-${code.name}" />
+
+    <property name="build_plugin.xml" location="../funz-profile/build_plugin.xml" />
+    <import file="${build_plugin.xml}"/>
+
+    <property file="${code.name}.properties"/>
+	
+    <target name="dist" depends="dist-iopluginjar"/> <!-- dist-ioplugin: copy the plugin jar files -->
+	     
+    <target name="test" depends="test-iopluginjar"/> <!-- test-iopluginjar: test the java plugin -->  
+	
+    <target name="install" depends="install-plugin"/> <!-- test-ioplugin: test the plugin ascii files -->
+
+    <target name="super.clean" depends="clean"/>
+    <target name="super.run-reference-cases" depends="run-reference-cases"/>
+
+</project>

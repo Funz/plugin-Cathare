@@ -1,0 +1,2 @@
+/opt/Cathare.sh: line 50: dos2unix: command not found
+ls: cannot access reader_*: No such file or directory

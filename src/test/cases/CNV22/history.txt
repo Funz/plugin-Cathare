@@ -1,0 +1,64 @@
+# all-in-one
+[23:00:34] Instanciating files
+[23:00:34] Instanciated files[/home/richet/.Funz/projects/CNV22_20231009-230028/spool/input/CNV22, /home/richet/.Funz/projects/CNV22_20231009-230028/spool/input/CNV22g]
+[23:00:34] Searching in cache: [[/home/richet/.Funz/projects/CNV22_20231009-230028/old]]
+[23:00:34] Cache not found.
+[23:00:34] Searching client ... 
+[23:00:34] Got provider...
+[23:00:34] Got client from provider...
+[23:00:34] reserved client ip=127.0.0.1 sc=1696883921974
+[23:00:34] Has a client: org.funz.api.BatchRun_v1$NewClientProvider$1@539260b3
+[23:00:34] Trying to reserve client org.funz.api.BatchRun_v1$NewClientProvider$1@539260b3
+[23:00:34] Using client localhost:38041
+[23:00:34] Sent files [/home/richet/.Funz/projects/CNV22_20231009-230028/spool/input/CNV22, /home/richet/.Funz/projects/CNV22_20231009-230028/spool/input/CNV22g]
+[23:00:34] Executing Cathare
+[23:00:35] info: 15 KB of data... ftp://127.0.0.1:2117
+[23:00:35] info: 15 KB of data... ftp://127.0.0.1:2117 saved.
+[23:00:35] Failed to execute on localhost: run failed: /home/richet/Sync/Open/Funz/github/alien/plugin-Cathare/Funz-Cathare/scripts/Cathare.sh: ligne 50: dos2unix : commande introuvable
+[23:00:35] Remote archiving done.
+[23:00:35] Transfer done.
+[23:00:35] /log.txt
+[23:00:35] /listing
+[23:00:35] /CNV22g
+[23:00:35] /PID
+[23:00:35] /err.txt
+[23:00:35] /CNV22
+[23:00:35] /out.txt
+[23:00:35] /reader.listing
+[23:00:35] Local unzip done.
+[23:00:35] Error: all-in-one: Failed to execute on localhost: run failed: /home/richet/Sync/Open/Funz/github/alien/plugin-Cathare/Funz-Cathare/scripts/Cathare.sh: ligne 50: dos2unix : commande introuvable
+[23:00:35] Instanciating files
+[23:00:35] Instanciated files[/home/richet/.Funz/projects/CNV22_20231009-230028/spool/input/CNV22, /home/richet/.Funz/projects/CNV22_20231009-230028/spool/input/CNV22g]
+[23:00:35] Searching in cache: [[/home/richet/.Funz/projects/CNV22_20231009-230028/old]]
+[23:00:35] Cache not found.
+[23:00:35] Searching client ... 
+[23:00:35] Got provider...
+[23:00:35] Got client from provider...
+[23:00:35] reserved client ip=127.0.0.1 sc=1696885222397
+[23:00:35] Has a client: org.funz.api.BatchRun_v1$NewClientProvider$1@4fdeb327
+[23:00:35] Trying to reserve client org.funz.api.BatchRun_v1$NewClientProvider$1@4fdeb327
+[23:00:35] Using client localhost:34397
+[23:00:35] Sent files [/home/richet/.Funz/projects/CNV22_20231009-230028/spool/input/CNV22, /home/richet/.Funz/projects/CNV22_20231009-230028/spool/input/CNV22g]
+[23:00:35] Executing Cathare
+[23:00:37] info: Pas de calcul permanent initial ftp://127.0.0.1:2158 null
+[23:00:37] info: Pas de calcul permanent initial ftp://127.0.0.1:2158 null saved.
+[23:00:40] info: Lancement du post-traitement... ftp://127.0.0.1:2158 null
+[23:00:40] info: Lancement du post-traitement... ftp://127.0.0.1:2158 null saved.
+[23:00:40] Execution done.
+[23:00:40] Remote archiving done.
+[23:00:41] Transfer done.
+[23:00:41] /log.txt
+[23:00:41] /FORT07
+[23:00:41] /FORT57
+[23:00:41] /C2.RESTART
+[23:00:41] /postpro.listing
+[23:00:41] /listing
+[23:00:41] /CNV22g
+[23:00:41] /C2.INIT.FORM
+[23:00:41] /err.txt
+[23:00:41] /CNV22
+[23:00:41] /out.txt
+[23:00:41] /reader.listing
+[23:00:41] Local unzip done.
+[23:00:41] Parsing results.
+[23:00:41] Results parsed: {TIME_DUM0=[D@6059e8fc, [TIME_MV,MV]=[Ljava.lang.Object;@3760022b, [TIME_ML,ML]=[Ljava.lang.Object;@d11aa9e, TIME_DUM8=[D@eb7cc4, path=, QL=[D@1dbdb787, [TIME_QL,QL]=[Ljava.lang.Object;@95d493c, ML=[D@1d3f143e, TIME_MV=[D@7de13c5f, P0=[D@5318eef3, TIME_P8=[D@299dbb96, QV=[D@14ae336c, [TIME_DUM8,DUM8]=[Ljava.lang.Object;@58593c86, [TIME_MTOT,MTOT]=[Ljava.lang.Object;@6f1f1cfc, MTOT=[D@55287c, P8=[D@445072eb, MV=[D@6b617c95, TIME_P0=[D@e3107c6, [TIME_QV,QV]=[Ljava.lang.Object;@6f5a0edb, TIME_ML=[D@270ec8b4, TIME_QV=[D@608e3194, [TIME_P8,P8]=[Ljava.lang.Object;@cadbea5, [TIME_DUM0,DUM0]=[Ljava.lang.Object;@1d811eba, DUM0=[D@6e24428, TIME_QL=[D@57786728, TIME_MTOT=[D@46ebeec2, DUM8=[D@96a731c, [TIME_P0,P0]=[Ljava.lang.Object;@aee190a}
