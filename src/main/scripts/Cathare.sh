@@ -49,16 +49,19 @@ echo "Initialisation..."
 # convert to unix (EoL issue)
 dos2unix *
 
-# Renommage des reader si besoin
-readers=`ls reader_*`
-if [ "$readers""zz" != "zz" ] ; then
-  mkdir -p reader
-  for i in $readers ; do
-    j=`echo $i | cut -d_ -f2`
-    mv $i reader/$j
-  done
+echo "Version..."
+# Lancement du reader avec gestion des masques de reader
+if [ -d "reader" ] ; then
+  sh $VERS/unix-procedur/vers.unix reader &
+    PID=$!
+    echo $PID >> $pid
+    wait $PID
+else
+  sh $VERS/unix-procedur/vers.unix &
+    PID=$!
+    echo $PID >> $pid
+    wait $PID
 fi
-
 
 # Traitement calcul initial permanent si besoin
 LS_NO1=`ls -I $1 -I PILOT.f -I reader.listing -F | grep -v "@" | cut -d':' -f1 | uniq | tr '\n' ' '`
@@ -87,30 +90,12 @@ fi
 echo "Lancement du reader..."
 # Lancement du reader avec gestion des masques de reader
 if [ -d "reader" ] ; then
-  sh $VERS/unix-procedur/vers.unix reader &
-    PID=$!
-    echo $PID >> $pid
-    wait $PID
   sh $VERS/unix-procedur/read.unix $input mask > reader.listing &
     PID=$!
     echo $PID >> $pid
     wait $PID
-  echo "  execution avec mask reader"
-  sh $VERS/unix-procedur/vers.unix reader &
-    PID=$!
-    echo $PID >> $pid
-    wait $PID
 else
-  sh $VERS/unix-procedur/vers.unix &
-    PID=$!
-    echo $PID >> $pid
-    wait $PID
   sh $VERS/unix-procedur/read.unix $input > reader.listing &
-    PID=$!
-    echo $PID >> $pid
-    wait $PID
-  echo "  execution sans mask reader"
-  sh $VERS/unix-procedur/vers.unix &
     PID=$!
     echo $PID >> $pid
     wait $PID
