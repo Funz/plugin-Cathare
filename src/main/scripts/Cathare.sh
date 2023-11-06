@@ -59,6 +59,31 @@ if [ "$readers""zz" != "zz" ] ; then
   done
 fi
 
+
+# Traitement calcul initial permanent si besoin
+LS_NO1=`ls -I $1 -I PILOT.f -I reader.listing -F | grep -v "@" | cut -d':' -f1 | uniq | tr '\n' ' '`
+PERMINIT=`grep PERMINIT $LS_NO1 | cut -d':' -f1 | uniq`
+PERMINIT=`echo $PERMINIT | tr -d '\n'`
+
+if [ ! "$PERMINIT""zz" == "zz" ] ; then
+  echo "Calcul permanent initial: "$PERMINIT
+  sh $VERS/unix-procedur/read.unix $PERMINIT > perminit.listing &
+    PID=$!
+    echo $PID >> $pid
+    wait $PID
+  sh $VERS/unix-procedur/cathar.unix > perm.listing &
+  PERMINIT_POSTPRO=`grep CHRONO *$PERMINIT* | cut -d: -f1 | uniq`
+  if [ ! "$PERMINIT_POSTPRO""zz" == "zz" ] ; then
+    echo "Postpro permanent initial"
+    sh $VERS/unix-procedur/postpro.unix $PERMINIT_POSTPRO > perminit_postpro.listing &
+      PID=$!
+      echo $PID >> $pid
+      wait $PID
+  fi
+else
+  echo "Pas de calcul permanent initial"
+fi  
+
 echo "Lancement du reader..."
 # Lancement du reader avec gestion des masques de reader
 if [ -d "reader" ] ; then
@@ -99,30 +124,6 @@ if [ `grep ERROR reader.listing|wc -w` != 0 ] ; then
 else
   echo "  pas d'erreur reader"
 fi
-
-# Traitement calcul initial permanent si besoin
-LS_NO1=`ls -I $1 -I PILOT.f -I reader.listing -F | grep -v "@" | cut -d':' -f1 | uniq | tr '\n' ' '`
-PERMINIT=`grep PERMINIT $LS_NO1 | cut -d':' -f1 | uniq`
-PERMINIT=`echo $PERMINIT | tr -d '\n'`
-
-if [ ! "$PERMINIT""zz" == "zz" ] ; then
-  echo "Calcul permanent initial: "$PERMINIT
-  sh $VERS/unix-procedur/read.unix $PERMINIT > perminit.listing &
-    PID=$!
-    echo $PID >> $pid
-    wait $PID
-  sh $VERS/unix-procedur/cathar.unix > perm.listing &
-  PERMINIT_POSTPRO=`grep CHRONO *$PERMINIT* | cut -d: -f1 | uniq`
-  if [ ! "$PERMINIT_POSTPRO""zz" == "zz" ] ; then
-    echo "Postpro permanent initial"
-    sh $VERS/unix-procedur/postpro.unix $PERMINIT_POSTPRO > perminit_postpro.listing &
-      PID=$!
-      echo $PID >> $pid
-      wait $PID
-  fi
-else
-  echo "Pas de calcul permanent initial"
-fi  
 
 echo "Lancement de Cathare..."
 # Lancement de Cathare
