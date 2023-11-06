@@ -75,6 +75,9 @@ if [ ! "$PERMINIT""zz" == "zz" ] ; then
     echo $PID >> $pid
     wait $PID
   sh $VERS/unix-procedur/cathar.unix > perm.listing &
+    PID=$!
+    echo $PID >> $pid
+    wait $PID
   PERMINIT_POSTPRO=`grep CHRONO *$PERMINIT* | cut -d: -f1 | uniq`
   if [ ! "$PERMINIT_POSTPRO""zz" == "zz" ] ; then
     echo "Postpro permanent initial"
